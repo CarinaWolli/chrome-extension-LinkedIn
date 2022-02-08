@@ -1,0 +1,16 @@
+{
+  "name": "Leadjet Chrome Extension",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "matches": ["*://www.linkedin.com/*"]
+    }
+  ],
+  "permissions": ["tabs"]
+}
