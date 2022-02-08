@@ -36,7 +36,8 @@ async function addUserInfoBox() {
 
 function addUserInfoBoxAfterLoad() {
   const observer = new MutationObserver(observerCallback);
-  observer.observe(main, { childList: true });
+  const mainElement = document.getElementById("main");
+  observer.observe(mainElement, { childList: true });
 
   function observerCallback(mutations, observer) {
     const mainElement = document.getElementById("main");
